@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+
+# Development files
+*backup*
+*test*
+*debug*
+
+# Keep repository clean
+# Only include: index.html, README.md, LICENSE, .gitignore
