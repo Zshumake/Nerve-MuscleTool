@@ -9417,6 +9417,20 @@
                         ${currentCase.educationalNote ? `<p><strong>Educational Note:</strong> ${currentCase.educationalNote}</p>` : ''}
                     </div>
                 `;
+                
+                // Add differential diagnosis for learning
+                if (currentCase.differentials && currentCase.differentials.length > 0) {
+                    feedbackHTML += `
+                        <div class="feedback-card info">
+                            <h4>📚 Differential Diagnosis Review</h4>
+                            <p><strong>Key differentials to consider for this presentation:</strong></p>
+                            <ul class="diagnosis-list">
+                                ${currentCase.differentials.map(dx => `<li class="expected-diagnosis">${dx}</li>`).join('')}
+                            </ul>
+                            <p class="feedback-note"><strong>Learning Point:</strong> Consider how the clinical presentation, exam findings, and EMG/NCS results help distinguish between these diagnoses.</p>
+                        </div>
+                    `;
+                }
             }
             
             // Special handling for EMG not indicated cases
