@@ -4885,6 +4885,327 @@
         .block-mechanism-card::before { background: linear-gradient(90deg, #ef4444, #dc2626); }
         .detection-card::before { background: linear-gradient(90deg, #8b5cf6, #7c3aed); }
         .recovery-card::before { background: linear-gradient(90deg, #10b981, #059669); }
+        
+        /* Nerve Fiber Classification Highway Styling */
+        .fiber-comparison-container {
+            margin: 30px 0;
+        }
+        
+        .fiber-highway {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            padding: 25px;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .fiber-highway::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+        }
+        
+        .motor-highway::before {
+            background: linear-gradient(90deg, #ef4444, #dc2626);
+        }
+        
+        .sensory-highway::before {
+            background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+        }
+        
+        .vip-highway::before {
+            background: linear-gradient(90deg, #f59e0b, #d97706);
+        }
+        
+        .highway-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .highway-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .highway-header h4 {
+            color: #1e293b;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .highway-header p {
+            color: #64748b;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+        
+        /* Fiber Lane Styling */
+        .fiber-lane {
+            background: linear-gradient(135deg, #fefefe 0%, #f1f5f9 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #cbd5e1;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .fiber-lane:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            border-color: #3b82f6;
+        }
+        
+        .lane-specs {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: white;
+            border-radius: 12px;
+            position: relative;
+        }
+        
+        .fiber-size {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        
+        .diameter-spec, .speed-spec {
+            font-size: 1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin: 5px;
+        }
+        
+        .highway-badge {
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 5px;
+        }
+        
+        .highway-badge.express {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+        }
+        
+        .highway-badge.local {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+        }
+        
+        .highway-badge.slow {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+        }
+        
+        .highway-badge.vip {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            animation: pulse-glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes pulse-glow {
+            from {
+                box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+            }
+            to {
+                box-shadow: 0 0 30px rgba(139, 92, 246, 0.8), 0 0 40px rgba(139, 92, 246, 0.3);
+            }
+        }
+        
+        .lane-content {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .lane-description {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 1px solid #10b981;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .lane-description p {
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #065f46;
+        }
+        
+        .lane-functions {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 1px solid #0ea5e9;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .lane-functions h5 {
+            color: #0c4a6e;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .lane-functions ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .lane-functions li {
+            margin-bottom: 5px;
+            color: #075985;
+        }
+        
+        .ncs-detection {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 1px solid #f59e0b;
+            border-radius: 10px;
+            padding: 15px;
+            position: relative;
+        }
+        
+        .detection-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .detection-badge.recorded {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+        }
+        
+        .detection-badge.not-recorded {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+        }
+        
+        .detection-badge.mixed {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+        }
+        
+        .ncs-detection p {
+            margin: 0;
+            color: #92400e;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        /* Clinical Takeaways */
+        .clinical-takeaways {
+            background: linear-gradient(135deg, #fefefe 0%, #f8fafc 100%);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 30px;
+            border: 2px solid #3b82f6;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
+        }
+        
+        .takeaway-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .takeaway-header h4 {
+            color: #1e293b;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .takeaway-header p {
+            color: #64748b;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        
+        .takeaways-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .takeaway-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .takeaway-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .ncs-limitations {
+            border-color: #ef4444;
+        }
+        
+        .ncs-limitations:hover {
+            border-color: #dc2626;
+            box-shadow: 0 15px 40px rgba(239, 68, 68, 0.2);
+        }
+        
+        .demyelination-pattern {
+            border-color: #3b82f6;
+        }
+        
+        .demyelination-pattern:hover {
+            border-color: #1d4ed8;
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.2);
+        }
+        
+        .normal-studies {
+            border-color: #10b981;
+        }
+        
+        .normal-studies:hover {
+            border-color: #059669;
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.2);
+        }
+        
+        .takeaway-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .takeaway-card h5 {
+            color: #1e293b;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .takeaway-card p {
+            color: #475569;
+            line-height: 1.6;
+            margin: 0;
+        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -4925,6 +5246,39 @@
 
             .physiology-card h4 {
                 font-size: 1.2rem;
+            }
+            
+            /* Fiber classification responsive */
+            .lane-specs {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .fiber-size {
+                font-size: 1.1rem;
+            }
+            
+            .diameter-spec, .speed-spec {
+                font-size: 0.9rem;
+                margin: 2px;
+            }
+            
+            .highway-badge {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+            
+            .takeaways-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .highway-icon {
+                font-size: 2.5rem;
+            }
+            
+            .highway-header h4 {
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -6902,6 +7256,248 @@
                                     <div class="clinical-correlation">
                                         <strong>🏥 Clinical:</strong> Metabolic myopathies affect energy
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Nerve Fiber Classification -->
+                    <div class="physiology-section">
+                        <div class="section-header gradient-header">
+                            <h3>🧵 Nerve Fiber Classification</h3>
+                            <p class="section-subtitle">The complete nerve highway system - Understanding the different "lanes" of neural traffic (Preston & Shapiro)</p>
+                        </div>
+                        
+                        <div class="section-description-enhanced">
+                            <p>Think of nerves as superhighways with multiple lanes carrying different types of information at different speeds. Just like express lanes handle fast traffic while local lanes carry slower vehicles, nerve fibers are classified by size and speed. Larger fibers = faster conduction, smaller fibers = slower speeds. This classification system is crucial for understanding what EMG/NCS can and cannot detect!</p>
+                        </div>
+                        
+                        <div class="fiber-comparison-container">
+                            <!-- Motor Highway -->
+                            <div class="fiber-highway motor-highway">
+                                <div class="highway-header">
+                                    <div class="highway-icon">💪</div>
+                                    <h4>Motor Highway</h4>
+                                    <p>The express lane for movement commands</p>
+                                </div>
+                                
+                                <div class="fiber-lane alpha-motor-lane">
+                                    <div class="lane-specs">
+                                        <div class="fiber-size">Aα Motor Fibers</div>
+                                        <div class="diameter-spec">6-12 μm diameter</div>
+                                        <div class="speed-spec">35-75 m/s</div>
+                                        <div class="highway-badge express">EXPRESS LANE</div>
+                                    </div>
+                                    
+                                    <div class="lane-content">
+                                        <div class="lane-description">
+                                            <p><strong>The VIP lane of the nervous system!</strong> These thick, myelinated superhighways carry movement commands from your brain to muscles.</p>
+                                        </div>
+                                        
+                                        <div class="lane-functions">
+                                            <h5>What they do:</h5>
+                                            <ul>
+                                                <li>🎯 Voluntary muscle contraction</li>
+                                                <li>⚡ Alpha motor neuron signals</li>
+                                                <li>💪 All the movements you control</li>
+                                                <li>🏃‍♂️ Fast, precise motor commands</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="ncs-detection">
+                                            <div class="detection-badge recorded">✅ EASILY RECORDED</div>
+                                            <p><strong>Routine motor NCS:</strong> These are exactly what we measure in standard EMG/NCS studies. CMAP amplitudes reflect how many of these fibers are working!</p>
+                                        </div>
+                                        
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical Pearl:</strong> When motor NCS are abnormal, these Aα fibers are damaged. The bigger the amplitude drop, the more fibers are gone!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Sensory Highway -->
+                            <div class="fiber-highway sensory-highway">
+                                <div class="highway-header">
+                                    <div class="highway-icon">👋</div>
+                                    <h4>Sensory Highway</h4>
+                                    <p>Multiple lanes for different sensations</p>
+                                </div>
+                                
+                                <!-- Aβ Lane -->
+                                <div class="fiber-lane abeta-lane">
+                                    <div class="lane-specs">
+                                        <div class="fiber-size">Aβ Sensory Fibers</div>
+                                        <div class="diameter-spec">6-12 μm diameter</div>
+                                        <div class="speed-spec">35-75 m/s</div>
+                                        <div class="highway-badge express">EXPRESS LANE</div>
+                                    </div>
+                                    
+                                    <div class="lane-content">
+                                        <div class="lane-description">
+                                            <p><strong>The touch and vibration superhighway!</strong> Same size and speed as motor fibers, but carrying sensory information up to your brain.</p>
+                                        </div>
+                                        
+                                        <div class="lane-functions">
+                                            <h5>What they carry:</h5>
+                                            <ul>
+                                                <li>👋 Light touch sensation</li>
+                                                <li>📳 Vibration (tuning fork tests)</li>
+                                                <li>🤏 Fine discriminative touch</li>
+                                                <li>📍 Joint position sense</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="ncs-detection">
+                                            <div class="detection-badge recorded">✅ EASILY RECORDED</div>
+                                            <p><strong>Routine sensory NCS:</strong> These create the SNAPs we measure! When you stimulate a finger and record from the wrist, you're testing Aβ fibers.</p>
+                                        </div>
+                                        
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical Pearl:</strong> Diabetic neuropathy often hits these first. Patient loses vibration sensation, but SNAPs may still be recordable early on.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Aδ Lane -->
+                                <div class="fiber-lane adelta-lane">
+                                    <div class="lane-specs">
+                                        <div class="fiber-size">Aδ Pain Fibers</div>
+                                        <div class="diameter-spec">1-5 μm diameter</div>
+                                        <div class="speed-spec">5-30 m/s</div>
+                                        <div class="highway-badge local">LOCAL LANE</div>
+                                    </div>
+                                    
+                                    <div class="lane-content">
+                                        <div class="lane-description">
+                                            <p><strong>The "fast pain" messengers!</strong> Smaller and slower than Aβ, but still myelinated. Think sharp, immediate pain like a pinprick.</p>
+                                        </div>
+                                        
+                                        <div class="lane-functions">
+                                            <h5>What they carry:</h5>
+                                            <ul>
+                                                <li>⚡ Sharp, fast pain</li>
+                                                <li>🧊 Cold temperature</li>
+                                                <li>📍 Initial pain sensation</li>
+                                                <li>⚠️ "Ouch!" reflexes</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="ncs-detection">
+                                            <div class="detection-badge not-recorded">❌ NOT RECORDED</div>
+                                            <p><strong>Too small for routine NCS:</strong> These fibers are too thin and their signals too dispersed to create measurable potentials in standard studies.</p>
+                                        </div>
+                                        
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical Pearl:</strong> Small fiber neuropathy affects these! Patient has burning pain but normal EMG/NCS. Need special tests like skin biopsy.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- C Fiber Lane -->
+                                <div class="fiber-lane c-fiber-lane">
+                                    <div class="lane-specs">
+                                        <div class="fiber-size">C Pain Fibers</div>
+                                        <div class="diameter-spec">0.2-1.5 μm diameter</div>
+                                        <div class="speed-spec">1-2 m/s</div>
+                                        <div class="highway-badge slow">SLOW LANE</div>
+                                    </div>
+                                    
+                                    <div class="lane-content">
+                                        <div class="lane-description">
+                                            <p><strong>The "slow burn" highway!</strong> Tiny, unmyelinated fibers that carry the deep, aching, burning sensations. These are the smallest and slowest in the nervous system.</p>
+                                        </div>
+                                        
+                                        <div class="lane-functions">
+                                            <h5>What they carry:</h5>
+                                            <ul>
+                                                <li>🔥 Burning, aching pain</li>
+                                                <li>🌡️ Heat sensation</li>
+                                                <li>😣 Chronic pain signals</li>
+                                                <li>💔 Deep, throbbing discomfort</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="ncs-detection">
+                                            <div class="detection-badge not-recorded">❌ NOT RECORDED</div>
+                                            <p><strong>Way too small for NCS:</strong> No myelin, incredibly slow, and signals are too dispersed. Standard EMG/NCS completely misses these fibers.</p>
+                                        </div>
+                                        
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical Pearl:</strong> Fibromyalgia, early diabetes, chemotherapy neuropathy often affect C-fibers. Normal EMG/NCS doesn't rule out neuropathy!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Special VIP Lane -->
+                            <div class="fiber-highway vip-highway">
+                                <div class="highway-header">
+                                    <div class="highway-icon">🏆</div>
+                                    <h4>VIP Express Lane</h4>
+                                    <p>The muscle feedback specialists</p>
+                                </div>
+                                
+                                <div class="fiber-lane ia-fiber-lane">
+                                    <div class="lane-specs">
+                                        <div class="fiber-size">Ia Muscle Afferents</div>
+                                        <div class="diameter-spec">12-21 μm diameter</div>
+                                        <div class="speed-spec">80-120 m/s</div>
+                                        <div class="highway-badge vip">VIP EXPRESS</div>
+                                    </div>
+                                    
+                                    <div class="lane-content">
+                                        <div class="lane-description">
+                                            <p><strong>The fastest fibers in your body!</strong> These massive, heavily myelinated superhighways are larger and faster than anything else in the nervous system. They're the muscle stretch sensors.</p>
+                                        </div>
+                                        
+                                        <div class="lane-functions">
+                                            <h5>What they do:</h5>
+                                            <ul>
+                                                <li>🎯 Muscle stretch detection</li>
+                                                <li>⚡ Knee-jerk reflex pathways</li>
+                                                <li>🤸‍♂️ Proprioception (body position)</li>
+                                                <li>⚖️ Balance and coordination</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="ncs-detection">
+                                            <div class="detection-badge mixed">⚠️ MIXED NERVE ONLY</div>
+                                            <p><strong>Special studies required:</strong> Only recorded in mixed nerve studies or H-reflexes. Too fast and specialized for routine sensory NCS.</p>
+                                        </div>
+                                        
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical Pearl:</strong> First affected in demyelinating diseases like GBS! Early loss of reflexes before weakness. Check H-reflexes early!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Key Clinical Takeaways -->
+                        <div class="clinical-takeaways">
+                            <div class="takeaway-header">
+                                <h4>🎯 Key Clinical Takeaways</h4>
+                                <p>What this means for your EMG/NCS interpretation</p>
+                            </div>
+                            
+                            <div class="takeaways-grid">
+                                <div class="takeaway-card ncs-limitations">
+                                    <div class="takeaway-icon">⚠️</div>
+                                    <h5>NCS Limitations</h5>
+                                    <p><strong>Standard EMG/NCS only sees the "express lanes"!</strong> We miss small fiber neuropathies, early autonomic problems, and pure pain/temperature issues.</p>
+                                </div>
+                                
+                                <div class="takeaway-card demyelination-pattern">
+                                    <div class="takeaway-icon">🛡️</div>
+                                    <h5>Demyelination Clues</h5>
+                                    <p><strong>Big fibers affected first!</strong> Ia fibers (reflexes) → Aα/Aβ (strength/touch) → small fibers last. Explains why reflexes disappear before weakness.</p>
+                                </div>
+                                
+                                <div class="takeaway-card normal-studies">
+                                    <div class="takeaway-icon">✅</div>
+                                    <h5>Normal Studies Don't Rule Out Neuropathy</h5>
+                                    <p><strong>50% of nerve fibers could be gone and NCS still normal!</strong> Small fibers aren't measured, so burning feet with normal studies is totally possible.</p>
                                 </div>
                             </div>
                         </div>
