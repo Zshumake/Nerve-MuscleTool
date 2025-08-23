@@ -4459,6 +4459,362 @@
                 max-width: calc(100vw - 20px);
             }
         }
+
+        /* Nerve Physiology Styles */
+        .physiology-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .physiology-section {
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: 2px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .gradient-header {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e40af 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gradient-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%);
+            background-size: 30px 30px;
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-30px); }
+            100% { transform: translateX(30px); }
+        }
+
+        .gradient-header h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+
+        .physiology-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .physiology-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 18px;
+            padding: 25px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .physiology-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border-color: #3b82f6;
+        }
+
+        .physiology-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+            display: block;
+        }
+
+        .physiology-card h4 {
+            color: #1e293b;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .physiology-content {
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        .physiology-content p {
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .physiology-content ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .physiology-content li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .physiology-content li::before {
+            content: '●';
+            color: #3b82f6;
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
+
+        .clinical-correlation {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 2px solid #10b981;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        .clinical-correlation strong {
+            color: #047857;
+        }
+
+        .velocity-formula, .channel-properties, .fiber-types {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px solid #f59e0b;
+            border-radius: 10px;
+            padding: 12px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* Specialized card colors */
+        .voltage-card::before { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
+        .sodium-card::before { background: linear-gradient(90deg, #ef4444, #f87171); }
+        .potassium-card::before { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+        .myelin-card::before { background: linear-gradient(90deg, #10b981, #34d399); }
+        .diameter-card::before { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+        .pathology-card::before { background: linear-gradient(90deg, #ef4444, #dc2626); }
+        .presynaptic-card::before { background: linear-gradient(90deg, #8b5cf6, #7c3aed); }
+        .synaptic-card::before { background: linear-gradient(90deg, #06b6d4, #0891b2); }
+        .postsynaptic-card::before { background: linear-gradient(90deg, #10b981, #059669); }
+        .channel-card::before { background: linear-gradient(90deg, #6366f1, #4f46e5); }
+        .pump-card::before { background: linear-gradient(90deg, #f59e0b, #d97706); }
+        .lipid-card::before { background: linear-gradient(90deg, #ec4899, #db2777); }
+        .excitation-card::before { background: linear-gradient(90deg, #8b5cf6, #7c3aed); }
+        .fiber-types-card::before { background: linear-gradient(90deg, #10b981, #059669); }
+        .metabolism-card::before { background: linear-gradient(90deg, #ef4444, #dc2626); }
+
+        /* Pathophysiology comparison */
+        .pathology-comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .pathology-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 18px;
+            padding: 25px;
+            border: 3px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .pathology-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .axonal-card {
+            border-color: #ef4444;
+        }
+
+        .demyelinating-card {
+            border-color: #3b82f6;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .card-header .card-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+            margin-bottom: 0;
+        }
+
+        .card-header h4 {
+            color: #1e293b;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .pathology-content h5 {
+            color: #3b82f6;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+
+        .examples {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* Interactive Learning Tools */
+        .learning-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .tool-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 18px;
+            padding: 25px;
+            border: 2px solid #e2e8f0;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border-color: #3b82f6;
+        }
+
+        .quiz-card::before { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
+        .simulator-card::before { background: linear-gradient(90deg, #06b6d4, #67e8f9); }
+        .calculator-card::before { background: linear-gradient(90deg, #10b981, #6ee7b7); }
+
+        .tool-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .tool-icon {
+            font-size: 2.5rem;
+            margin-right: 15px;
+        }
+
+        .tool-card h4 {
+            color: #1e293b;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .tool-card p {
+            color: #64748b;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .tool-button {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .tool-button:hover {
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .physiology-container {
+                padding: 15px;
+            }
+
+            .physiology-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .pathology-comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .learning-tools-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .gradient-header {
+                padding: 20px;
+            }
+
+            .gradient-header h3 {
+                font-size: 1.5rem;
+            }
+
+            .physiology-card {
+                padding: 20px;
+            }
+
+            .card-icon {
+                font-size: 2rem;
+            }
+
+            .physiology-card h4 {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -4476,6 +4832,7 @@
             <nav class="tab-navigation">
                 <button class="tab-button active" onclick="showTab(0)">Interactive Case Studies</button>
                 <button class="tab-button" onclick="showTab(1)">Nerve Conduction Studies</button>
+                <button class="tab-button" onclick="showTab(10)">🧬 Nerve Physiology</button>
                 <button class="tab-button" onclick="showTab(6)">📹 NCS Videos</button>
                 <button class="tab-button" onclick="showTab(7)">📖 Cardinal Rules of NCS</button>
                 <button class="tab-button" onclick="showTab(2)">EMG Instruments</button>
@@ -4697,6 +5054,37 @@
                 
                 <div class="alert-info">
                     <strong>Complete NCS Reference:</strong> Essential studies are highlighted with ⭐ ESSENTIAL badges - master these first. Advanced studies follow for complex cases. All studies from Preston & Shapiro included.
+                </div>
+
+                <!-- Key Technical Points -->
+                <div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; margin-bottom: 30px; border: none;">
+                    <h3 style="color: white; margin-bottom: 20px;">⚡ Key Technical Points - Cardinal Rules of NCS</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
+                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; backdrop-filter: blur(10px);">
+                            <h4 style="color: #ffd700; margin-bottom: 8px;">🌡️ Temperature Control</h4>
+                            <p style="margin: 0; font-size: 14px;">Keep limbs warm (>32°C) - cold slows conduction velocity</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; backdrop-filter: blur(10px);">
+                            <h4 style="color: #ffd700; margin-bottom: 8px;">⚡ Supramaximal Stimulation</h4>
+                            <p style="margin: 0; font-size: 14px;">Increase intensity until no further amplitude increase, then add 20%</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; backdrop-filter: blur(10px);">
+                            <h4 style="color: #ffd700; margin-bottom: 8px;">🎯 Electrode Placement</h4>
+                            <p style="margin: 0; font-size: 14px;">Precise anatomical landmarks are crucial for reproducible results</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; backdrop-filter: blur(10px);">
+                            <h4 style="color: #ffd700; margin-bottom: 8px;">📏 Distance Measurement</h4>
+                            <p style="margin: 0; font-size: 14px;">Use consistent surface measurements with tape measure</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; backdrop-filter: blur(10px);">
+                            <h4 style="color: #ffd700; margin-bottom: 8px;">🔇 Artifact Minimization</h4>
+                            <p style="margin: 0; font-size: 14px;">Proper grounding and electrode impedance (<5 kΩ)</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; backdrop-filter: blur(10px);">
+                            <h4 style="color: #ffd700; margin-bottom: 8px;">🎛️ Stimulator Optimization</h4>
+                            <p style="margin: 0; font-size: 14px;">Start with low intensity, find optimal position, then increase</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="study-grid">
@@ -6070,6 +6458,431 @@
                             
                             <div class="challenge-feedback" id="challenge-feedback" style="display: none;">
                                 <!-- Feedback will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab 10: Nerve Physiology -->
+            <section id="tab-10" class="tab-content">
+                <h2 class="section-title">🧬 Nerve Physiology</h2>
+                <p class="section-description">Comprehensive understanding of cellular and molecular mechanisms underlying nerve function, conduction, and synaptic transmission. Essential physiological concepts for advanced EMG/NCS interpretation.</p>
+                
+                <div class="physiology-container">
+                    <!-- Action Potential Cascade -->
+                    <div class="physiology-section">
+                        <div class="section-header gradient-header">
+                            <h3>⚡ Action Potential Cascade</h3>
+                            <p class="section-subtitle">The electrical foundation of neural communication</p>
+                        </div>
+                        
+                        <div class="physiology-cards-grid">
+                            <div class="physiology-card voltage-card">
+                                <div class="card-icon">🔋</div>
+                                <h4>Resting Potential</h4>
+                                <div class="physiology-content">
+                                    <p><strong>-70mV to -90mV</strong></p>
+                                    <ul>
+                                        <li>Na+/K+-ATPase pump (3:2 ratio)</li>
+                                        <li>K+ leak channels dominant</li>
+                                        <li>Impermeant anions trapped inside</li>
+                                        <li>Electrochemical equilibrium</li>
+                                    </ul>
+                                    <div class="clinical-correlation">
+                                        <strong>🏥 Clinical:</strong> Resting potential changes in neuropathies affect excitability
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="physiology-card sodium-card">
+                                <div class="card-icon">🚀</div>
+                                <h4>Depolarization</h4>
+                                <div class="physiology-content">
+                                    <p><strong>Threshold: -55mV</strong></p>
+                                    <ul>
+                                        <li>Voltage-gated Na+ channels open</li>
+                                        <li>Positive feedback loop</li>
+                                        <li>Fast Na+ conductance (0.1-0.2ms)</li>
+                                        <li>Peak: +30 to +40mV</li>
+                                    </ul>
+                                    <div class="clinical-correlation">
+                                        <strong>🏥 Clinical:</strong> Na+ channel dysfunction = muscle weakness, myotonia
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="physiology-card potassium-card">
+                                <div class="card-icon">📉</div>
+                                <h4>Repolarization</h4>
+                                <div class="physiology-content">
+                                    <p><strong>K+ efflux dominant</strong></p>
+                                    <ul>
+                                        <li>Na+ channels inactivate</li>
+                                        <li>Delayed K+ channels open</li>
+                                        <li>Membrane returns to rest</li>
+                                        <li>Brief hyperpolarization</li>
+                                    </ul>
+                                    <div class="clinical-correlation">
+                                        <strong>🏥 Clinical:</strong> K+ channel disorders = periodic paralysis
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Conduction Velocity Secrets -->
+                    <div class="physiology-section">
+                        <div class="section-header gradient-header">
+                            <h3>🏃‍♂️ Conduction Velocity Secrets</h3>
+                            <p class="section-subtitle">What makes nerves fast or slow</p>
+                        </div>
+                        
+                        <div class="physiology-cards-grid">
+                            <div class="physiology-card myelin-card">
+                                <div class="card-icon">🛡️</div>
+                                <h4>Myelination</h4>
+                                <div class="physiology-content">
+                                    <p><strong>Saltatory Conduction</strong></p>
+                                    <ul>
+                                        <li>Nodes of Ranvier (1-2μm gaps)</li>
+                                        <li>High Na+ channel density at nodes</li>
+                                        <li>Internodal length: 150-1500μm</li>
+                                        <li>50x faster than unmyelinated</li>
+                                    </ul>
+                                    <div class="velocity-formula">
+                                        <strong>Formula:</strong> CV = 6 × diameter (μm) m/s
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="physiology-card diameter-card">
+                                <div class="card-icon">📏</div>
+                                <h4>Axon Diameter</h4>
+                                <div class="physiology-content">
+                                    <p><strong>Size Matters</strong></p>
+                                    <ul>
+                                        <li>Large axons = faster conduction</li>
+                                        <li>Motor > Sensory > Autonomic</li>
+                                        <li>Temperature coefficient: 2.4%/°C</li>
+                                        <li>Aging: 0.4 m/s decrease per decade</li>
+                                    </ul>
+                                    <div class="fiber-types">
+                                        <p><strong>Fiber Types:</strong></p>
+                                        <p>Aα (70-120 m/s) > Aβ (30-70 m/s) > C (0.5-2 m/s)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="physiology-card pathology-card">
+                                <div class="card-icon">⚠️</div>
+                                <h4>Pathological Changes</h4>
+                                <div class="physiology-content">
+                                    <p><strong>Disease Effects</strong></p>
+                                    <ul>
+                                        <li>Demyelination: ↓ velocity, ↑ latency</li>
+                                        <li>Axonal loss: ↓ amplitude</li>
+                                        <li>Conduction block: amplitude drop</li>
+                                        <li>Temporal dispersion: duration ↑</li>
+                                    </ul>
+                                    <div class="clinical-correlation">
+                                        <strong>🏥 Clinical:</strong> Pattern determines neuropathy type
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Synaptic Transmission -->
+                    <div class="physiology-section">
+                        <div class="section-header gradient-header">
+                            <h3>🔗 Synaptic Transmission</h3>
+                            <p class="section-subtitle">Neuromuscular junction mechanics</p>
+                        </div>
+                        
+                        <div class="physiology-cards-grid">
+                            <div class="physiology-card presynaptic-card">
+                                <div class="card-icon">📡</div>
+                                <h4>Presynaptic Events</h4>
+                                <div class="physiology-content">
+                                    <p><strong>Ca²⁺-Mediated Release</strong></p>
+                                    <ul>
+                                        <li>Voltage-gated Ca²⁺ channels</li>
+                                        <li>SNARE protein complex</li>
+                                        <li>Vesicle fusion & exocytosis</li>
+                                        <li>ACh quantum release</li>
+                                    </ul>
+                                    <div class="clinical-correlation">
+                                        <strong>🏥 Clinical:</strong> Lambert-Eaton affects Ca²⁺ channels
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="physiology-card synaptic-card">
+                                <div class="card-icon">⚡</div>
+                                <h4>Synaptic Cleft</h4>
+                                <div class="physiology-content">
+                                    <p><strong>20-50nm Gap</strong></p>
+                                    <ul>
+                                        <li>ACh diffusion time: 0.2ms</li>
+                                        <li>Acetylcholinesterase breakdown</li>
+                                        <li>Safety factor: 3-4x</li>
+                                        <li>Miniature EPPs: 0.4mV</li>
+                                    </ul>
+                                    <div class="clinical-correlation">
+                                        <strong>🏥 Clinical:</strong> Organophosphates block AChE
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="physiology-card postsynaptic-card">
+                                <div class="card-icon">🎯</div>
+                                <h4>Postsynaptic Response</h4>
+                                <div class="physiology-content">
+                                    <p><strong>Nicotinic ACh Receptors</strong></p>
+                                    <ul>
+                                        <li>Pentameric structure (2α,β,δ,ε)</li>
+                                        <li>Na⁺/K⁺ non-selective channel</li>
+                                        <li>EPP → Muscle action potential</li>
+                                        <li>All-or-nothing response</li>
+                                    </ul>
+                                    <div class="clinical-correlation">
+                                        <strong>🏥 Clinical:</strong> Myasthenia gravis attacks AChR
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Membrane Chemistry -->
+                    <div class="physiology-section">
+                        <div class="section-header gradient-header">
+                            <h3>🧪 Membrane Chemistry</h3>
+                            <p class="section-subtitle">Ion channels and molecular machinery</p>
+                        </div>
+                        
+                        <div class="physiology-cards-grid">
+                            <div class="physiology-card channel-card">
+                                <div class="card-icon">🚪</div>
+                                <h4>Ion Channel Types</h4>
+                                <div class="physiology-content">
+                                    <p><strong>Selective Permeability</strong></p>
+                                    <ul>
+                                        <li>Voltage-gated: Na⁺, K⁺, Ca²⁺</li>
+                                        <li>Ligand-gated: ACh, GABA, Gly</li>
+                                        <li>Mechanosensitive channels</li>
+                                        <li>Leak channels: K⁺ dominant</li>
+                                    </ul>
+                                    <div class="channel-properties">
+                                        <p><strong>Properties:</strong> Selectivity, gating, inactivation</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="physiology-card pump-card">
+                                <div class="card-icon">⚙️</div>
+                                <h4>Active Transport</h4>
+                                <div class="physiology-content">
+                                    <p><strong>Energy-Dependent</strong></p>
+                                    <ul>
+                                        <li>Na⁺/K⁺-ATPase: Primary pump</li>
+                                        <li>Ca²⁺-ATPase: Muscle relaxation</li>
+                                        <li>H⁺-ATPase: pH regulation</li>
+                                        <li>Secondary transport systems</li>
+                                    </ul>
+                                    <div class="clinical-correlation">
+                                        <strong>🏥 Clinical:</strong> Digitalis blocks Na⁺/K⁺ pump
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="physiology-card lipid-card">
+                                <div class="card-icon">🫧</div>
+                                <h4>Membrane Structure</h4>
+                                <div class="physiology-content">
+                                    <p><strong>Phospholipid Bilayer</strong></p>
+                                    <ul>
+                                        <li>Hydrophobic core barrier</li>
+                                        <li>Cholesterol: fluidity control</li>
+                                        <li>Membrane proteins: 50% mass</li>
+                                        <li>Capacitance: 1 μF/cm²</li>
+                                    </ul>
+                                    <div class="clinical-correlation">
+                                        <strong>🏥 Clinical:</strong> Membrane instability in channelopathies
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pathophysiology Patterns -->
+                    <div class="physiology-section">
+                        <div class="section-header gradient-header">
+                            <h3>🔬 Pathophysiology Patterns</h3>
+                            <p class="section-subtitle">Disease mechanisms and EMG/NCS correlations</p>
+                        </div>
+                        
+                        <div class="pathology-comparison-grid">
+                            <div class="pathology-card axonal-card">
+                                <div class="card-header">
+                                    <div class="card-icon">💥</div>
+                                    <h4>Axonal Injury</h4>
+                                </div>
+                                <div class="pathology-content">
+                                    <div class="mechanism">
+                                        <h5>Mechanism:</h5>
+                                        <ul>
+                                            <li>Axon structural damage</li>
+                                            <li>Wallerian degeneration</li>
+                                            <li>Reduced axon number</li>
+                                        </ul>
+                                    </div>
+                                    <div class="emg-findings">
+                                        <h5>EMG/NCS Changes:</h5>
+                                        <ul>
+                                            <li>🔽 Amplitude (CMAP/SNAP)</li>
+                                            <li>✅ Normal velocity</li>
+                                            <li>⚡ Fibrillations/PSWs</li>
+                                            <li>🔄 Chronic: large MUPs</li>
+                                        </ul>
+                                    </div>
+                                    <div class="examples">
+                                        <strong>Examples:</strong> Diabetes, chemotherapy, alcohol
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="pathology-card demyelinating-card">
+                                <div class="card-header">
+                                    <div class="card-icon">🛡️</div>
+                                    <h4>Demyelinating</h4>
+                                </div>
+                                <div class="pathology-content">
+                                    <div class="mechanism">
+                                        <h5>Mechanism:</h5>
+                                        <ul>
+                                            <li>Myelin sheath damage</li>
+                                            <li>Saltatory conduction loss</li>
+                                            <li>Conduction block</li>
+                                        </ul>
+                                    </div>
+                                    <div class="emg-findings">
+                                        <h5>EMG/NCS Changes:</h5>
+                                        <ul>
+                                            <li>🐌 Slow velocity</li>
+                                            <li>⏰ Prolonged latency</li>
+                                            <li>🚧 Conduction block</li>
+                                            <li>📏 Temporal dispersion</li>
+                                        </ul>
+                                    </div>
+                                    <div class="examples">
+                                        <strong>Examples:</strong> CIDP, GBS, CMT1
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Muscle Fiber Physiology -->
+                    <div class="physiology-section">
+                        <div class="section-header gradient-header">
+                            <h3>💪 Muscle Fiber Physiology</h3>
+                            <p class="section-subtitle">Excitation-contraction coupling and fiber types</p>
+                        </div>
+                        
+                        <div class="physiology-cards-grid">
+                            <div class="physiology-card excitation-card">
+                                <div class="card-icon">⚡</div>
+                                <h4>E-C Coupling</h4>
+                                <div class="physiology-content">
+                                    <p><strong>Signal Transduction</strong></p>
+                                    <ul>
+                                        <li>T-tubule system</li>
+                                        <li>Sarcoplasmic reticulum</li>
+                                        <li>Ca²⁺ release & uptake</li>
+                                        <li>Troponin/tropomyosin</li>
+                                    </ul>
+                                    <div class="clinical-correlation">
+                                        <strong>🏥 Clinical:</strong> Malignant hyperthermia = RYR1 mutations
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="physiology-card fiber-types-card">
+                                <div class="card-icon">🏃</div>
+                                <h4>Fiber Types</h4>
+                                <div class="physiology-content">
+                                    <p><strong>Motor Unit Properties</strong></p>
+                                    <ul>
+                                        <li>Type I: Slow, oxidative</li>
+                                        <li>Type IIa: Fast, oxidative</li>
+                                        <li>Type IIx: Fast, glycolytic</li>
+                                        <li>Recruitment order by size</li>
+                                    </ul>
+                                    <div class="clinical-correlation">
+                                        <strong>🏥 Clinical:</strong> Fiber type grouping in reinnervation
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="physiology-card metabolism-card">
+                                <div class="card-icon">🔥</div>
+                                <h4>Energy Systems</h4>
+                                <div class="physiology-content">
+                                    <p><strong>ATP Generation</strong></p>
+                                    <ul>
+                                        <li>Creatine phosphate: Immediate</li>
+                                        <li>Glycolysis: Short-term</li>
+                                        <li>Oxidative: Long-term</li>
+                                        <li>Metabolic demand varies</li>
+                                    </ul>
+                                    <div class="clinical-correlation">
+                                        <strong>🏥 Clinical:</strong> Metabolic myopathies affect energy
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Interactive Learning Tools -->
+                    <div class="physiology-section">
+                        <div class="section-header gradient-header">
+                            <h3>🎯 Interactive Learning</h3>
+                            <p class="section-subtitle">Test your physiological knowledge</p>
+                        </div>
+                        
+                        <div class="learning-tools-grid">
+                            <div class="tool-card quiz-card">
+                                <div class="tool-header">
+                                    <div class="tool-icon">❓</div>
+                                    <h4>Physiology Quiz</h4>
+                                </div>
+                                <p>Test membrane potential, action potential, and synaptic transmission concepts</p>
+                                <button class="tool-button" onclick="startPhysiologyQuiz()">
+                                    🧠 Start Quiz
+                                </button>
+                            </div>
+                            
+                            <div class="tool-card simulator-card">
+                                <div class="tool-header">
+                                    <div class="tool-icon">📊</div>
+                                    <h4>Virtual Oscilloscope</h4>
+                                </div>
+                                <p>Visualize action potentials, EPPs, and compound muscle action potentials</p>
+                                <button class="tool-button" onclick="openVirtualScope()">
+                                    📈 Open Simulator
+                                </button>
+                            </div>
+                            
+                            <div class="tool-card calculator-card">
+                                <div class="tool-header">
+                                    <div class="tool-icon">🧮</div>
+                                    <h4>Physiology Calculator</h4>
+                                </div>
+                                <p>Calculate membrane potentials, conduction velocities, and safety factors</p>
+                                <button class="tool-button" onclick="openPhysiologyCalc()">
+                                    🔢 Calculate
+                                </button>
                             </div>
                         </div>
                     </div>
