@@ -6189,7 +6189,15 @@
                 ],
                 requiresEMG: true,
                 correctDiagnosis: "Moderate Carpal Tunnel Syndrome",
-                explanation: "Classic presentation with night symptoms, thenar weakness, positive provocative tests, and selective median nerve abnormalities on NCS. EMG shows chronic denervation in median-innervated thenar muscles confirming the diagnosis."
+                explanation: "Classic presentation with night symptoms, thenar weakness, positive provocative tests, and selective median nerve abnormalities on NCS. EMG shows chronic denervation in median-innervated thenar muscles confirming the diagnosis.",
+                differentials: [
+                    "Carpal tunnel syndrome",
+                    "Pronator teres syndrome",  
+                    "C6/C7 radiculopathy",
+                    "Brachial plexopathy",
+                    "Thenar muscle strain",
+                    "De Quervain's tenosynovitis"
+                ]
             },
             'footdrop': {
                 title: "Foot Drop/Dorsiflexor Weakness", 
@@ -7190,7 +7198,15 @@
                 emgIndication: "INDICATED",
                 difficulty: "beginner",
                 correctDiagnosis: "Common Peroneal Neuropathy at Fibular Head (Post-surgical)",
-                explanation: "Iatrogenic peroneal nerve injury at fibular head from surgical positioning or compression. Complete palsy affecting both deep (dorsiflexion) and superficial (eversion) peroneal nerves with sparing of tibial nerve function."
+                explanation: "Iatrogenic peroneal nerve injury at fibular head from surgical positioning or compression. Complete palsy affecting both deep (dorsiflexion) and superficial (eversion) peroneal nerves with sparing of tibial nerve function.",
+                differentials: [
+                    "Common peroneal neuropathy at fibular head",
+                    "L5 radiculopathy", 
+                    "Deep peroneal neuropathy",
+                    "Sciatic neuropathy (high division)",
+                    "Lumbosacral plexopathy",
+                    "Anterior compartment syndrome"
+                ]
             },
             'mg': {
                 title: "Fatigable Weakness and Ptosis",
@@ -9213,7 +9229,7 @@
         // Smart differential analysis with synonym recognition
         function analyzeDifferential() {
             const userInput = document.getElementById('user-differential').value.toLowerCase();
-            const expectedDifferentials = currentCase.expectedDifferential || [];
+            const expectedDifferentials = currentCase.differentials || [];
             const feedbackDiv = document.getElementById('differential-feedback');
             
             if (!userInput.trim()) {
