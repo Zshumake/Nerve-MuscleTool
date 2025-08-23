@@ -4523,9 +4523,16 @@
 
         .physiology-cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
             margin-top: 20px;
+        }
+        
+        /* Ensure exactly 3 columns when space allows */
+        @media (min-width: 1000px) {
+            .physiology-cards-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         .physiology-card {
@@ -4773,6 +4780,111 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
         }
+
+        /* Sub-tabs within Nerve Physiology */
+        .physiology-sub-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .physiology-sub-tab-btn {
+            background: transparent;
+            border: none;
+            padding: 15px 30px;
+            margin: 0 5px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #64748b;
+        }
+        
+        .physiology-sub-tab-btn.active {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+        
+        .physiology-sub-tab-btn:hover {
+            background: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+        }
+        
+        .physiology-sub-tab-btn.active:hover {
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+            color: white;
+        }
+        
+        .physiology-sub-content {
+            display: none;
+        }
+        
+        .physiology-sub-content.active {
+            display: block;
+        }
+        
+        /* Enhanced description styling */
+        .section-description-enhanced {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-left: 4px solid #3b82f6;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #475569;
+        }
+        
+        /* Pathophysiology-specific styles */
+        .pathophysiology-explanation {
+            background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+            border: 1px solid #f97316;
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .pathophysiology-explanation strong {
+            color: #ea580c;
+        }
+        
+        /* Timeline enhancements */
+        .timeline-container {
+            position: relative;
+            margin: 30px 0;
+        }
+        
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+            transform: translateX(-50%);
+        }
+        
+        /* New card color schemes for pathophysiology */
+        .volume-card::before { background: linear-gradient(90deg, #06b6d4, #0891b2); }
+        .waveform-card::before { background: linear-gradient(90deg, #8b5cf6, #7c3aed); }
+        .distance-card::before { background: linear-gradient(90deg, #f59e0b, #d97706); }
+        .dispersion-card::before { background: linear-gradient(90deg, #10b981, #059669); }
+        .cancellation-card::before { background: linear-gradient(90deg, #ef4444, #dc2626); }
+        .pathology-dispersion-card::before { background: linear-gradient(90deg, #8b5cf6, #7c3aed); }
+        .anatomy-card::before { background: linear-gradient(90deg, #3b82f6, #1d4ed8); }
+        .motor-pattern-card::before { background: linear-gradient(90deg, #10b981, #059669); }
+        .timing-card::before { background: linear-gradient(90deg, #f59e0b, #d97706); }
+        .block-mechanism-card::before { background: linear-gradient(90deg, #ef4444, #dc2626); }
+        .detection-card::before { background: linear-gradient(90deg, #8b5cf6, #7c3aed); }
+        .recovery-card::before { background: linear-gradient(90deg, #10b981, #059669); }
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -5993,71 +6105,6 @@
                         </div>
                     </div>
 
-                    <!-- Wallerian Degeneration Timeline -->
-                    <div class="rule-section">
-                        <div class="section-header">
-                            <h3>⏰ Wallerian Degeneration Timeline</h3>
-                            <p class="section-subtitle">Critical timing for interpreting acute nerve injuries</p>
-                        </div>
-                        
-                        <div class="timeline-container">
-                            <div class="timeline-item">
-                                <div class="timeline-marker day-0">Day 0-3</div>
-                                <div class="timeline-content">
-                                    <h4>Immediate Phase</h4>
-                                    <p>Normal distal NCS despite proximal nerve injury</p>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item">
-                                <div class="timeline-marker day-3">Day 3-5</div>
-                                <div class="timeline-content">
-                                    <h4>Motor Decline</h4>
-                                    <p>Motor responses begin to decline</p>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item">
-                                <div class="timeline-marker day-6">Day 6-10</div>
-                                <div class="timeline-content">
-                                    <h4>Sensory Decline</h4>
-                                    <p>Sensory responses begin to decline</p>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item">
-                                <div class="timeline-marker day-7">Day 7-10</div>
-                                <div class="timeline-content">
-                                    <h4>Complete Loss</h4>
-                                    <p>Distal nerve becomes inexcitable</p>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item">
-                                <div class="timeline-marker week-2">Week 2-3</div>
-                                <div class="timeline-content">
-                                    <h4>EMG Changes</h4>
-                                    <p>Fibrillations appear on needle EMG</p>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-item">
-                                <div class="timeline-marker month-3">Month 3-6</div>
-                                <div class="timeline-content">
-                                    <h4>Recovery Phase</h4>
-                                    <p>Reinnervation potentials appear if recovery occurs</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="clinical-implication">
-                            <div class="implication-header">
-                                <span class="warning-icon">⚠️</span>
-                                <h4>Clinical Implication</h4>
-                            </div>
-                            <p>Normal NCS in first week don't exclude severe nerve injury</p>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -6467,14 +6514,30 @@
             <!-- Tab 10: Nerve Physiology -->
             <section id="tab-10" class="tab-content">
                 <h2 class="section-title">🧬 Nerve Physiology</h2>
-                <p class="section-description">Comprehensive understanding of cellular and molecular mechanisms underlying nerve function, conduction, and synaptic transmission. Essential physiological concepts for advanced EMG/NCS interpretation.</p>
+                <p class="section-description">Comprehensive understanding of cellular and molecular mechanisms underlying nerve function, conduction, synaptic transmission, and pathophysiology. Essential physiological concepts for advanced EMG/NCS interpretation.</p>
+                
+                <!-- Sub-tabs -->
+                <div class="physiology-sub-tabs">
+                    <button class="physiology-sub-tab-btn active" onclick="showPhysiologySubTab('physiology')">
+                        🧬 Basic Physiology
+                    </button>
+                    <button class="physiology-sub-tab-btn" onclick="showPhysiologySubTab('pathophysiology')">
+                        🔬 Pathophysiology
+                    </button>
+                </div>
                 
                 <div class="physiology-container">
+                    <!-- Physiology Sub-tab Content -->
+                    <div id="physiology-subcontent" class="physiology-sub-content active">
                     <!-- Action Potential Cascade -->
                     <div class="physiology-section">
                         <div class="section-header gradient-header">
                             <h3>⚡ Action Potential Cascade</h3>
-                            <p class="section-subtitle">The electrical foundation of neural communication</p>
+                            <p class="section-subtitle">The electrical foundation of neural communication - Understanding the precise molecular events that generate and propagate electrical signals in nerve fibers</p>
+                        </div>
+                        
+                        <div class="section-description-enhanced">
+                            <p>The action potential represents the fundamental unit of information transfer in the nervous system. This all-or-nothing electrical event involves precisely coordinated molecular changes across the nerve membrane that create a propagating wave of depolarization. Understanding these mechanisms is critical for interpreting EMG/NCS abnormalities and localizing neurological lesions.</p>
                         </div>
                         
                         <div class="physiology-cards-grid">
@@ -6886,6 +6949,359 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+                    
+                    <!-- Pathophysiology Sub-tab Content -->
+                    <div id="pathophysiology-subcontent" class="physiology-sub-content">
+                        
+                        <!-- Wallerian Degeneration Timeline -->
+                        <div class="physiology-section">
+                            <div class="section-header gradient-header">
+                                <h3>⏰ Wallerian Degeneration Timeline</h3>
+                                <p class="section-subtitle">Critical timing for interpreting acute nerve injuries - Understanding the precise temporal sequence of axonal degeneration</p>
+                            </div>
+                            
+                            <div class="section-description-enhanced">
+                                <p>Wallerian degeneration represents the predictable breakdown of axons distal to a site of injury. This process follows a precise timeline that is crucial for EMG/NCS interpretation in acute nerve injuries. Understanding these phases helps clinicians time their studies appropriately and interpret seemingly "normal" results in the acute setting.</p>
+                            </div>
+                            
+                            <div class="timeline-container">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker day-0">Day 0-3</div>
+                                    <div class="timeline-content">
+                                        <h4>Immediate Phase</h4>
+                                        <p>Normal distal NCS despite proximal nerve injury</p>
+                                        <div class="pathophysiology-explanation">
+                                            <strong>Mechanism:</strong> Distal axon still viable, normal excitability maintained
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker day-3">Day 3-5</div>
+                                    <div class="timeline-content">
+                                        <h4>Motor Decline</h4>
+                                        <p>Motor responses begin to decline</p>
+                                        <div class="pathophysiology-explanation">
+                                            <strong>Mechanism:</strong> Large motor axons degenerate first, CMAP amplitudes drop
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker day-6">Day 6-10</div>
+                                    <div class="timeline-content">
+                                        <h4>Sensory Decline</h4>
+                                        <p>Sensory responses begin to decline</p>
+                                        <div class="pathophysiology-explanation">
+                                            <strong>Mechanism:</strong> Sensory axons follow motor degeneration, SNAP amplitudes drop
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker day-7">Day 7-10</div>
+                                    <div class="timeline-content">
+                                        <h4>Complete Loss</h4>
+                                        <p>Distal nerve becomes inexcitable</p>
+                                        <div class="pathophysiology-explanation">
+                                            <strong>Mechanism:</strong> Axonal membrane breakdown, complete conduction failure
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker week-2">Week 2-3</div>
+                                    <div class="timeline-content">
+                                        <h4>EMG Changes</h4>
+                                        <p>Fibrillations appear on needle EMG</p>
+                                        <div class="pathophysiology-explanation">
+                                            <strong>Mechanism:</strong> Denervated muscle fibers become hyperexcitable
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker month-3">Month 3-6</div>
+                                    <div class="timeline-content">
+                                        <h4>Recovery Phase</h4>
+                                        <p>Reinnervation potentials appear if recovery occurs</p>
+                                        <div class="pathophysiology-explanation">
+                                            <strong>Mechanism:</strong> Axonal sprouting and muscle reinnervation
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="clinical-implication">
+                                <div class="implication-header">
+                                    <span class="warning-icon">⚠️</span>
+                                    <h4>Critical Clinical Point</h4>
+                                </div>
+                                <p><strong>Normal NCS in the first week don't exclude severe nerve injury!</strong> Always consider the timeline when interpreting acute studies.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Volume Conduction Principles -->
+                        <div class="physiology-section">
+                            <div class="section-header gradient-header">
+                                <h3>📡 Volume Conduction Principles</h3>
+                                <p class="section-subtitle">Understanding how electrical signals travel from nerve/muscle to recording electrodes</p>
+                            </div>
+                            
+                            <div class="section-description-enhanced">
+                                <p>Volume conduction describes how bioelectric potentials spread through conductive tissues to reach recording electrodes. This fundamental concept explains the shape, size, and timing of recorded potentials and is essential for understanding EMG/NCS waveform morphology.</p>
+                            </div>
+                            
+                            <div class="physiology-cards-grid">
+                                <div class="physiology-card volume-card">
+                                    <div class="card-icon">📶</div>
+                                    <h4>Near-field Potentials</h4>
+                                    <div class="physiology-content">
+                                        <p><strong>Most NCS record near-field potentials</strong></p>
+                                        <ul>
+                                            <li>CMAPs and SNAPs are near-field</li>
+                                            <li>Electrode close to source</li>
+                                            <li>High amplitude recordings</li>
+                                            <li>Sharp, well-defined waveforms</li>
+                                        </ul>
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical:</strong> Proper electrode placement critical for amplitude
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="physiology-card waveform-card">
+                                    <div class="card-icon">〰️</div>
+                                    <h4>Waveform Types</h4>
+                                    <div class="physiology-content">
+                                        <p><strong>Shape depends on source location</strong></p>
+                                        <ul>
+                                            <li>Triphasic: Advancing action potential</li>
+                                            <li>Biphasic: Starting under electrode</li>
+                                            <li>Positive→negative→positive phases</li>
+                                            <li>Duration reflects propagation time</li>
+                                        </ul>
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical:</strong> Waveform morphology indicates proximity
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="physiology-card distance-card">
+                                    <div class="card-icon">📏</div>
+                                    <h4>Distance Effects</h4>
+                                    <div class="physiology-content">
+                                        <p><strong>Amplitude decreases with distance</strong></p>
+                                        <ul>
+                                            <li>Inverse square law relationship</li>
+                                            <li>Far-field: stimulus artifact</li>
+                                            <li>Appears instantly at all sites</li>
+                                            <li>Low amplitude, wide distribution</li>
+                                        </ul>
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical:</strong> Explains why proximal responses smaller
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Temporal Dispersion & Phase Cancellation -->
+                        <div class="physiology-section">
+                            <div class="section-header gradient-header">
+                                <h3>⏰ Temporal Dispersion & Phase Cancellation</h3>
+                                <p class="section-subtitle">Why proximal sensory responses are smaller and longer in duration</p>
+                            </div>
+                            
+                            <div class="section-description-enhanced">
+                                <p>As nerve impulses travel over longer distances, faster and slower conducting fibers arrive at recording sites at different times. This temporal dispersion creates phase cancellation effects that reduce amplitude and increase duration - a normal phenomenon that becomes pathologically enhanced in demyelinating conditions.</p>
+                            </div>
+                            
+                            <div class="physiology-cards-grid">
+                                <div class="physiology-card dispersion-card">
+                                    <div class="card-icon">⚡</div>
+                                    <h4>Temporal Dispersion</h4>
+                                    <div class="physiology-content">
+                                        <p><strong>Fast fibers arrive before slow fibers</strong></p>
+                                        <ul>
+                                            <li>Normal fiber velocity variation</li>
+                                            <li>Increases with distance</li>
+                                            <li>Creates "smeared" waveforms</li>
+                                            <li>Duration increases proximally</li>
+                                        </ul>
+                                        <div class="velocity-formula">
+                                            <strong>Effect:</strong> Duration ∝ Distance ÷ Velocity
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="physiology-card cancellation-card">
+                                    <div class="card-icon">❌</div>
+                                    <h4>Phase Cancellation</h4>
+                                    <div class="physiology-content">
+                                        <p><strong>Overlapping phases reduce amplitude</strong></p>
+                                        <ul>
+                                            <li>Positive phase of fast fibers</li>
+                                            <li>Overlaps negative phase of slow fibers</li>
+                                            <li>Net amplitude reduction</li>
+                                            <li>More prominent proximally</li>
+                                        </ul>
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical:</strong> Normal proximal SNAP reduction
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="physiology-card pathology-dispersion-card">
+                                    <div class="card-icon">⚠️</div>
+                                    <h4>Pathological Enhancement</h4>
+                                    <div class="physiology-content">
+                                        <p><strong>Disease worsens these effects</strong></p>
+                                        <ul>
+                                            <li>Demyelination increases dispersion</li>
+                                            <li>Greater velocity variation</li>
+                                            <li>Excessive phase cancellation</li>
+                                            <li>Motor studies less affected</li>
+                                        </ul>
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical:</strong> Hallmark of demyelinating neuropathy
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Radiculopathy Patterns -->
+                        <div class="physiology-section">
+                            <div class="section-header gradient-header">
+                                <h3>🌿 Radiculopathy Pathophysiology</h3>
+                                <p class="section-subtitle">Understanding nerve root lesions and their unique EMG/NCS patterns</p>
+                            </div>
+                            
+                            <div class="section-description-enhanced">
+                                <p>Radiculopathies present unique challenges for EMG/NCS interpretation because the lesion occurs proximal to the dorsal root ganglion. This anatomical relationship creates characteristic patterns that distinguish root lesions from more peripheral nerve injuries.</p>
+                            </div>
+                            
+                            <div class="physiology-cards-grid">
+                                <div class="physiology-card anatomy-card">
+                                    <div class="card-icon">🏗️</div>
+                                    <h4>Anatomical Considerations</h4>
+                                    <div class="physiology-content">
+                                        <p><strong>Proximal to DRG location</strong></p>
+                                        <ul>
+                                            <li>Lesion proximal to dorsal root ganglion</li>
+                                            <li>Sensory cell bodies intact</li>
+                                            <li>Distal sensory axons preserved</li>
+                                            <li>Normal sensory conduction studies</li>
+                                        </ul>
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical:</strong> Normal SNAPs with sensory loss
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="physiology-card motor-pattern-card">
+                                    <div class="card-icon">💪</div>
+                                    <h4>Motor Involvement</h4>
+                                    <div class="physiology-content">
+                                        <p><strong>Selective muscle denervation</strong></p>
+                                        <ul>
+                                            <li>Only root-innervated muscles affected</li>
+                                            <li>Myotomal distribution pattern</li>
+                                            <li>Multiple nerve involvement</li>
+                                            <li>Paraspinal muscle changes</li>
+                                        </ul>
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical:</strong> Multiple nerve territory involvement
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="physiology-card timing-card">
+                                    <div class="card-icon">⏱️</div>
+                                    <h4>Temporal Patterns</h4>
+                                    <div class="physiology-content">
+                                        <p><strong>Specific timing sequence</strong></p>
+                                        <ul>
+                                            <li>Paraspinals abnormal first (7-10 days)</li>
+                                            <li>Proximal muscles next (2-3 weeks)</li>
+                                            <li>Distal muscles last (3-4 weeks)</li>
+                                            <li>H-reflex changes early</li>
+                                        </ul>
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical:</strong> Timing guides needle EMG planning
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Conduction Block -->
+                        <div class="physiology-section">
+                            <div class="section-header gradient-header">
+                                <h3>🚧 Conduction Block Mechanisms</h3>
+                                <p class="section-subtitle">Understanding focal demyelination and its effects on nerve conduction</p>
+                            </div>
+                            
+                            <div class="section-description-enhanced">
+                                <p>Conduction block represents focal failure of impulse propagation through an otherwise intact axon. This phenomenon occurs when demyelination or compression creates sufficient impedance to prevent action potential propagation, resulting in amplitude drops without velocity changes.</p>
+                            </div>
+                            
+                            <div class="physiology-cards-grid">
+                                <div class="physiology-card block-mechanism-card">
+                                    <div class="card-icon">🔬</div>
+                                    <h4>Mechanism</h4>
+                                    <div class="physiology-content">
+                                        <p><strong>Focal demyelination effects</strong></p>
+                                        <ul>
+                                            <li>Local myelin loss or thinning</li>
+                                            <li>Increased membrane capacitance</li>
+                                            <li>Current leak at demyelinated node</li>
+                                            <li>Insufficient current for propagation</li>
+                                        </ul>
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical:</strong> Reversible with remyelination
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="physiology-card detection-card">
+                                    <div class="card-icon">🎯</div>
+                                    <h4>NCS Detection</h4>
+                                    <div class="physiology-content">
+                                        <p><strong>Amplitude drop criteria</strong></p>
+                                        <ul>
+                                            <li>>50% amplitude drop across segment</li>
+                                            <li>Normal distal latency</li>
+                                            <li>Normal or mildly slow velocity</li>
+                                            <li>May see temporal dispersion</li>
+                                        </ul>
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical:</strong> Indicates demyelinating pathology
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="physiology-card recovery-card">
+                                    <div class="card-icon">🔄</div>
+                                    <h4>Recovery Patterns</h4>
+                                    <div class="physiology-content">
+                                        <p><strong>Remyelination timeline</strong></p>
+                                        <ul>
+                                            <li>Block may resolve in weeks-months</li>
+                                            <li>Remyelination restores conduction</li>
+                                            <li>Thinner myelin = slower velocity</li>
+                                            <li>Complete recovery possible</li>
+                                        </ul>
+                                        <div class="clinical-correlation">
+                                            <strong>🏥 Clinical:</strong> Better prognosis than axonal loss
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -6924,6 +7340,28 @@
                         initializeVideos();
                     }
                 }, 100);
+            }
+        }
+        
+        function showPhysiologySubTab(subtab) {
+            // Hide all physiology sub-contents
+            const subContents = document.querySelectorAll('.physiology-sub-content');
+            subContents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all sub-tab buttons
+            const subTabButtons = document.querySelectorAll('.physiology-sub-tab-btn');
+            subTabButtons.forEach(button => button.classList.remove('active'));
+            
+            // Show selected sub-tab content
+            const targetSubContent = document.getElementById(`${subtab}-subcontent`);
+            if (targetSubContent) {
+                targetSubContent.classList.add('active');
+            }
+            
+            // Add active class to corresponding button
+            const targetButton = document.querySelector(`button[onclick="showPhysiologySubTab('${subtab}')"]`);
+            if (targetButton) {
+                targetButton.classList.add('active');
             }
         }
         
